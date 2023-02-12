@@ -1,0 +1,146 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+@keyframes opacity {
+    from {
+        opacity: 0%;
+
+    }
+
+    to {
+        opacity: 100%;
+    }
+
+}
+
+body {
+    font-family: monospace;
+    background-color: rgba(0, 0, 0, .75);
+    
+}
+
+.card {
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+    animation: opacity 2s;
+}
+
+.card:hover {
+    background-color: lightgray;
+
+}
+
+.card>img {
+    width: 100%;
+    height: 250px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: end;
+    padding-right: 5.5%;
+    height: 2rem;
+}
+
+.search-form>#search {
+    outline: none;
+    background-color: white;
+    border: none;
+
+}
+
+.search-form>button {
+    border: none;
+    background: none;
+    color: white;
+
+}
+
+#detail {
+    animation: opacity 2s;
+    margin: 3px;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+#detail>img {
+    width: 300px;
+    height: 300px;
+}
+
+#detail>.text {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    width: 100%;
+}
+
+#desc {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 3px;
+    text-align: start;
+}
+
+.buy {
+    margin: 3px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 3px;
+    display: flex;
+    justify-content: end;
+}
+
+.buy>input {
+    width: 5%;
+}
+
+.cart-list {
+    animation: opacity 2s;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 3px;
+    justify-content: start;
+    display: flex;
+}
+
+.cart-list>img {
+    width: 150px;
+    height: 150px;
+}
+
+.cart-list > strong {
+    text-align: start;
+    justify-content: start;
+    align-items: start;
+
+}
+
+.cart-list > .info {
+    padding: 10px;
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.cart-list > table{
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+}
+
+td {
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+}
+
+td>form{
+    margin: 1px;
+}
+
