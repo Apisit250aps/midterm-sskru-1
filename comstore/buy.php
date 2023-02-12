@@ -54,7 +54,9 @@ include "config.php";
     include "config.php";
     $unit = $_POST['unit'];
     $name = $_POST['name'];
+    // การตรวจสอบจำนวนสินค้าในคลัง ว่าเพียงพอไหม 
     $pro = mysqli_fetch_array(mysqli_query($con, "SELECT quantity FROM products WHERE product_name = '$name'"));
+    // หากไม่ จะแจ้งเตือนไปยังผู้ใช้ว่า ไม่สามารถซื้อได้
     if ($pro['quantity'] < $unit) {
         echo ' <div class="alert alert-danger alert-dismissible fade show d-flex flex-column align-items-center justify-content-between"
         role="alert">
@@ -63,9 +65,11 @@ include "config.php";
         <a href="http://localhost/comstore/cart.php">Back to cart</a>
     </div>';
         mysqli_close($con);
+    // ถ้าหากพอ  
     } else {
+        // จะเปลี่ยนอัพเดทจำนวนสินค้าในคลัง ด้วยการลบ จากจำนวนในตะกร้า
         if (mysqli_query($con, "UPDATE `products` SET quantity = quantity-$unit WHERE product_name = '$name'")) {
-
+            // กากซื้อสำเร็จ จะลบสินค้าออกจากตะกร้า
             mysqli_query($con, "DELETE FROM `cart` WHERE product_name = '$name'");
             echo ' <div class="alert alert-success alert-dismissible fade show d-flex flex-column align-items-center justify-content-between"
         role="alert">

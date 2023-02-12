@@ -53,7 +53,7 @@ include "config.php";
         </div>
         <div class="cart">
             <?php
-
+            // การแสดง รายการสินค้าในตะกร้า 
             $carts = mysqli_fetch_all(mysqli_query($con, "SELECT * FROM `cart` WHERE 1"), MYSQLI_ASSOC);
             foreach ($carts as $cart) {
             ?>
@@ -77,10 +77,12 @@ include "config.php";
                                     <p><?php echo $cart['unit'] * $info['price'] ?>$
                                 </td>
                                 <td class="d-flex flex-row justify-content-end">
+                                    <!-- ปุ่ม ลบ สินค้า จะดำเนินการผ่าน file del.php -->
                                     <form action="del.php" method="post">
                                         <input type="hidden" name="key" value="<?php echo $info['product_name']; ?>">
                                         <button class="btn btn-danger" type="submit">Del</button>
                                     </form>
+                                    <!-- ปุ่ม ซื้อ สินค้า จะดำเนินการผ่าน file buy.php -->
                                     <form action="buy.php" method="post">
                                         <input type="hidden" name="unit" value="<?php echo $cart['unit']; ?>">
                                         <input type="hidden" name="name" value="<?php echo $info['product_name']; ?>">
@@ -94,7 +96,6 @@ include "config.php";
             <?php } ?>
         </div>
     </section>
-
 </body>
 
 </html>

@@ -54,9 +54,12 @@ include "config.php";
         </div>
     </nav>
     <?php
+    // รับค่า POST จากหน้า index เมื่อกดปุ่ม Show detail
     $dataInfo = $_POST['data'];
+    // แสดงรายละเอียดสินค้า โดยระบุ ชื่อสินค้า
     $detail = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM `products` WHERE product_name = '$dataInfo'"));
     ?>
+    <!-- การแสดงรายละเอียดสินค้า -->
     <section class="container">
         <div class="d-flex flex-column flex-md-row bg-white" id="detail">
             <img src="<?php echo $detail['img_source'] ?>" alt="" class="">
@@ -67,9 +70,9 @@ include "config.php";
                     <p><?php echo $detail['product_brand'] ?></p>
                     <p><?php echo $detail['category'] ?></p>
                 </div>
-
             </div>
         </div>
+        <!-- กดปุ่มเพื่อเพิ่มสินค้าลงในตะกร้า -->
         <form action="add-cart.php" method="post" class="bg-white buy">
             <input type="hidden" value="<?php echo $detail['product_name'] ?>" name="name">
             <input type="number" name="unit" min="1" value="1" max="<?php echo $detail['quantity'] ?>" id="" class="form-control mx-1">
@@ -77,6 +80,7 @@ include "config.php";
                 <strong>Add cart</strong>
             </button>
         </form>
+        <!-- แสดง description สินค้า หากมี -->
         <div id="desc" class="bg-white">
             <strong>Detail</strong>
             <p><?php echo $detail['desc']; ?></p>

@@ -1,5 +1,5 @@
 <?php
-
+// เชื่อมต่อฐานข้อมูล
 $HostName = 'localhost';
 $UserName = 'root';
 $PassWord = '';
