@@ -8,19 +8,7 @@ scope this project.
 	- delete items. 
 	- update items.
 	
-Folder infomations 
-	comstore. 
-		computer store.
-			search products.
-			update and delete cart.
-			buy to update products.
-	
-	note 
-		write note.
-			write your note.
-			edit your note.
-			delete your note.
-	
+
 
 0. ใช้คำสัง่ git clone https://github.com/Apisit250aps/midterm-sskru-1.git
 1. ให้ย้าย ไฟล์ ไปไว้ใน xampp/htdoc 
