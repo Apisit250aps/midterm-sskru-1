@@ -1,4 +1,8 @@
 "# midterm-sskru-1" 
+
+
+
+
 0. ใช้คำสัง่ git clone https://github.com/Apisit250aps/midterm-sskru-1.git
 1. ให้ย้าย ไฟล์ ไปไว้ใน xampp/htdoc 
 2. file 'upload' ของ comstore ให้ย้ายไปที่ xampp/htdoc
