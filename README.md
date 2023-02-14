@@ -2,6 +2,8 @@
 
 
 PHP, mysql, bootstrap Project midterm.
+
+
 scope this project.
 	- search items.
 	- add items.
