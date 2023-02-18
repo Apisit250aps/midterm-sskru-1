@@ -33,7 +33,7 @@ include "config.php";
 <body class="bg-light">
     <?php include "navbar.php" ?>
     
-    <section class="d-flex flex-wrap-reverse justify-content-start align-items-center container">
+    <section class="d-flex flex-column-reverse flex-md-row-reverse justify-content-start align-items-center container">
         <!-- การแสดงรายการข้อมูล database ด้วย foreach  -->
         <?php foreach (mysqli_fetch_all(mysqli_query($con, "SELECT * FROM `note` WHERE 1"), MYSQLI_ASSOC) as $note) { ?>
             <div class="note bg-white p-3 border rounded" style="width: 20rem;">
