@@ -14,7 +14,7 @@
    $ git clone https://github.com/Apisit250aps/midterm-sskru-1.git 
 ```
 
-### 1. Move folder to xampp  ``` :\xampp\htdoc\ ```
+### 1. Move folder to xampp  ``` :\xampp\htdoc\ ``` and run xampp
    - Folder ``` 'upload' ``` move to  ``` :\xampp\htdoc\ ```
 
 ### 2. Create your database on [phpmyadmin](http://localhost/phpmyadmin/)
@@ -34,6 +34,6 @@ $con = mysqli_connect($HostName, $UserName, $PassWord, $DataBase);
 ?>
 ```
 
-### 4. Run xampp `apache` and  `MySQL`
+### 4. Run xampp `apache admin`  and  `MySQL admin`
 
 #### Facebook [YU](https://web.facebook.com/me/)
