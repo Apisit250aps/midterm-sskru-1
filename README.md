@@ -1,22 +1,39 @@
-"# midterm-sskru-1" 
+# Midterm-project
 
+## Programming language, library and framwork
+- PHP
+- Mysqli
+- HTML
+- CSS 
+- JavaScript
+- Bootstrap
 
-PHP, mysql, bootstrap Project midterm.
+## Get start
 
+```bash
+   $ git clone https://github.com/Apisit250aps/midterm-sskru-1.git 
+```
 
-scope this project.
-	- search items.
-	- add items.
-	- delete items. 
-	- update items.
-	
+1. Move folder to xampp  ``` :\xampp\htdoc\ ```
+   - Folder ``` 'upload' ``` move to  ``` :\xampp\htdoc\ ```
 
+2. Create your database on [phpmyadmin](http://localhost/phpmyadmin/)
+   - Create new database
+   - `file.sql` import to your database
 
-0. ใช้คำสัง่ git clone https://github.com/Apisit250aps/midterm-sskru-1.git
-1. ให้ย้าย ไฟล์ ไปไว้ใน xampp/htdoc 
-2. file 'upload' ของ comstore ให้ย้ายไปที่ xampp/htdoc
-3. file 'config.php' คือไฟล์เชื่อมต่อกับฐานข้อมูล ให้แก้เป็นของตัวเอง
-4. file 'file.sql' คือไฟล์ database ให้สร้าง database ใน phpmyadmin แล้ว import database
+3. config your database connect `config.php`
+```php
+<?php 
 
+$HostName = 'localhost';      // your host name
+$UserName = 'root';           // your username
+$PassWord = '';               // your password
+$DataBase = 'EcommerceStore'; // databasename 
+$con = mysqli_connect($HostName, $UserName, $PassWord, $DataBase);
 
+?>
+```
 
+4. Run xampp `apache` and  `MySQL`
+
+### Facebook [YU](https://web.facebook.com/me/)
