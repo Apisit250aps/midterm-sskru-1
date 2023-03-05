@@ -9,8 +9,4 @@ $note = $_POST['note'];
 if (mysqli_query($con, "INSERT INTO `note` (`id`, `title`, `note`) VALUES (NULL, '$title', '$note')")){
     header("Location:http://localhost/note/index.php");
 }
-
-
-
-
 ?>
